@@ -5,20 +5,20 @@
 class Reflo < Formula
   desc "Reflo – Reflect, Flow, and Log your daily actions."
   homepage "https://github.com/saijo-shota-biz/reflo"
-  version "0.1.0"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/saijo-shota-biz/reflo/releases/download/v0.1.0/reflo_0.1.0_darwin_amd64.tar.gz"
-      sha256 "25e4565961da0d9ace34523da474846dad08dac5e24bed223f03a1945a5777c9"
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.0.0/reflo_1.0.0_darwin_amd64.tar.gz"
+      sha256 "5b688252b0d82033fcb6b905768a60ebc4f478e011e3d45d04cd11d5176ed328"
 
       def install
         bin.install "reflo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/saijo-shota-biz/reflo/releases/download/v0.1.0/reflo_0.1.0_darwin_arm64.tar.gz"
-      sha256 "4ab77d8c7356bcc83a1454fdc66682c43b387f78a080fc717955e8f0f68bbe75"
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.0.0/reflo_1.0.0_darwin_arm64.tar.gz"
+      sha256 "3d36ddc467925a06f4a4adf49718fda77d02ecf11c6be43fd4b1a055cdaf4827"
 
       def install
         bin.install "reflo"
@@ -27,24 +27,18 @@ class Reflo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/saijo-shota-biz/reflo/releases/download/v0.1.0/reflo_0.1.0_linux_amd64.tar.gz"
-        sha256 "24fc727534aeeba95be0f33f6351273a53c9b240f48ba56b14c89027e19e45f9"
-
-        def install
-          bin.install "reflo"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.0.0/reflo_1.0.0_linux_amd64.tar.gz"
+      sha256 "57074fcb8c4bc573117a6e5840afac508e6b835677396e5f482e95f9229a1583"
+      def install
+        bin.install "reflo"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/saijo-shota-biz/reflo/releases/download/v0.1.0/reflo_0.1.0_linux_arm64.tar.gz"
-        sha256 "81b886d7d852d0596076c503c2b804273d217bceb95a40f69864a86d97f5a5fe"
-
-        def install
-          bin.install "reflo"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.0.0/reflo_1.0.0_linux_arm64.tar.gz"
+      sha256 "54d7c87c3dde90ac0646867c951b39fd83d4f6e15b57785ece796b7f83b73968"
+      def install
+        bin.install "reflo"
       end
     end
   end
