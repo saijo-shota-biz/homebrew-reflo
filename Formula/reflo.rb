@@ -5,20 +5,20 @@
 class Reflo < Formula
   desc "Reflo – Reflect, Flow, and Log your daily actions."
   homepage "https://github.com/saijo-shota-biz/reflo"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.2.0/reflo_1.2.0_darwin_amd64.tar.gz"
-      sha256 "dbd91a3d21a5c623e7120131a1ac3d765f1506baff2f10dfdf416f8bb7514019"
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.3.0/reflo_1.3.0_darwin_amd64.tar.gz"
+      sha256 "6923b33c4251cc0729f8432b7eefcb7bc8d1332aeefcdafc3f0791e1c8bd1d9e"
 
       def install
         bin.install "reflo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.2.0/reflo_1.2.0_darwin_arm64.tar.gz"
-      sha256 "2ef9c05a25cb2cd67d4edd4f2ac64597a1cddd33b6f749d6b338327b3c6b97c5"
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.3.0/reflo_1.3.0_darwin_arm64.tar.gz"
+      sha256 "efee579ce278f6ce164476edca08eba0fc053777bea3340834897b9423579551"
 
       def install
         bin.install "reflo"
@@ -28,15 +28,15 @@ class Reflo < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.2.0/reflo_1.2.0_linux_amd64.tar.gz"
-      sha256 "0ffc925b6fbe9d6e307e648dd437bd7976fdf5099ec2937d5defc4423a5821e6"
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.3.0/reflo_1.3.0_linux_amd64.tar.gz"
+      sha256 "0110870831c04e181cfc89e367df5eeddcbdc1b4379da75c56f099b1f15fd32c"
       def install
         bin.install "reflo"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.2.0/reflo_1.2.0_linux_arm64.tar.gz"
-      sha256 "d8ee22c5b97379c0f7a35b591fac1753c3d9d09be875cec7fd98c6e4fddd8553"
+      url "https://github.com/saijo-shota-biz/reflo/releases/download/v1.3.0/reflo_1.3.0_linux_arm64.tar.gz"
+      sha256 "65b658b5fccbeacd6b765a04fc7e289d242893325ee0876cbf90c967f9eac532"
       def install
         bin.install "reflo"
       end
